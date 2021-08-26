@@ -14,6 +14,16 @@ let cor_principal = '#7A4AB4';
 let btn_iniciar_largura = 200;
 let btn_iniciar_posicaoX = (window.innerWidth/1.5) - (btn_iniciar_largura/1.5);
 let btn_voltar;
+let btn_voltar2;
+let btn_fase1;
+let btn_fase2;
+let btn_fase3;
+let btn_fase4;
+let btn_fase5;
+let btn_fase6;
+let btn_fase7;
+let btn_fase8;
+let btn_fase9;
 let btn_jogar;
 let btn_instrucoes;
 let btn_creditos;
@@ -50,13 +60,19 @@ function setup() {
     btn_voltar.addClass("btn btn-voltar");
     btn_voltar.mousePressed(tela_inicial);
     
+    // Botão voltar para tela fases
+    btn_voltar2 = createButton("VOLTAR");
+    btn_voltar2.position(20, 50);
+    btn_voltar2.addClass("btn btn-voltar");
+    btn_voltar2.mousePressed(tela_fases);
+
     // Botão jogar
     btn_jogar = createButton('JOGAR');
     btn_jogar.position(btn_iniciar_posicaoX, 210);
     btn_jogar.addClass("btn btn-jogar");
-    btn_jogar.mousePressed(tela_jogo);
+    btn_jogar.mousePressed(tela_fases);
     
-    // Botão instrucoes
+    // Botão instruções
     btn_instrucoes = createButton('INSTRUÇÕES');
     btn_instrucoes.position(btn_iniciar_posicaoX, 290);
     btn_instrucoes.addClass("btn btn-jogar");
@@ -68,11 +84,51 @@ function setup() {
     btn_creditos.addClass("btn btn-jogar");
     btn_creditos.mousePressed(tela_creditos);
 
-    // Botão fase1
+    // Botões fases
     btn_fase1 = createButton('1');
     btn_fase1.position(505, 194);
     btn_fase1.addClass("btn btn-fase1");
     btn_fase1.mousePressed(tela_fase_1);
+
+    btn_fase2 = createButton('2');
+    btn_fase2.position(594, 194);
+    btn_fase2.addClass("btn btn-fase2");
+    btn_fase2.mousePressed(tela_fase_2);
+
+    btn_fase3 = createButton('3');
+    btn_fase3.position(683, 194);
+    btn_fase3.addClass("btn btn-fase2");
+    btn_fase3.mousePressed(tela_fase_3);
+
+    btn_fase4 = createButton('4');
+    btn_fase4.position(505, 329);
+    btn_fase4.addClass("btn btn-fase2");
+    btn_fase4.mousePressed(tela_fase_4);
+
+    btn_fase5 = createButton('5');
+    btn_fase5.position(594, 329);
+    btn_fase5.addClass("btn btn-fase2");
+    btn_fase5.mousePressed(tela_fase_5);
+
+    btn_fase6 = createButton('6');
+    btn_fase6.position(683, 329);
+    btn_fase6.addClass("btn btn-fase2");
+    btn_fase6.mousePressed(tela_fase_6);
+
+    btn_fase7 = createButton('7');
+    btn_fase7.position(505, 464);
+    btn_fase7.addClass("btn btn-fase2");
+    btn_fase7.mousePressed(tela_fase_7);
+
+    btn_fase8 = createButton('8');
+    btn_fase8.position(595, 464);
+    btn_fase8.addClass("btn btn-fase2");
+    btn_fase8.mousePressed(tela_fase_8);
+
+    btn_fase9 = createButton('9');
+    btn_fase9.position(683, 464);
+    btn_fase9.addClass("btn btn-fase2");
+    btn_fase9.mousePressed(tela_fase_9);
 
     tela_inicial();
     // noLoop();
@@ -111,13 +167,12 @@ function draw() {
 // Criando funções para cada tela
 function tela_inicial() {
     tela = 1;
-
-    // O clear é pra limpar a tela
     clear();
-    background(cor_principal);
-    image(logo, 250, 130, 400, 400);
-    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
     mostrar_menu();
+   
+    background(cor_principal);
+    image(logo, 255, 130, 400, 400);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
 function tela_instrucoes() {
@@ -151,16 +206,23 @@ function tela_creditos() {
     text("Jogo de Anagramas de Palavras desenvolvido pela" + "\n" + "aluna Maria Cecília em 2021, ainda não publicado.", 700, 300);
 }
 
-function tela_jogo() {
+function tela_fases() {
     tela = 4;
-    let img_progresso_x = largura_central - 177;
-    let img_progresso_y = altura_central - 220;
     clear();
-    esconder_menu();
+    mostrar_btn_fases();
+
     background(cor_principal);
-    image(tela_jogo_progresso, img_progresso_x, img_progresso_y, 354, 439);
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
-    btn_fase1.show();
+    //image(tela_jogo_progresso, img_progresso_x, img_progresso_y, 354, 439);
+    
+    //NÃO TÁ APARECENDO A PALAVRA FASES
+    textAlign(CENTER);
+    textSize(20);
+    textFont(font_regular);
+    fill('white');
+    text("FASES");
+
+   
 }
 
 function tela_fase_1() {
@@ -168,11 +230,87 @@ function tela_fase_1() {
     let img_jogo_x = largura_central - 215;
     let img_jogo_y = altura_central - 225;
     clear();
-    esconder_menu();
+    
+    esconder_btn_fases();
     background(cor_principal);
     image(tela_jogo_palavra, img_jogo_x, img_jogo_y, 430, 450);
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
-    btn_fase1.hide();
+}
+
+
+function tela_fase_2() {
+    tela = 6;
+    clear();
+    
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
+}
+
+
+function tela_fase_3() {
+    tela = 7;
+    clear();
+    
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
+}
+
+
+function tela_fase_4() {
+    tela = 8;
+    clear();
+    
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
+}
+
+function tela_fase_5() {
+    tela = 9;
+    clear();
+    
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
+}
+
+
+function tela_fase_6() {
+    tela = 10;
+    clear();
+    
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
+}
+
+function tela_fase_7() {
+    tela = 11;
+    clear();
+    
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
+}
+
+function tela_fase_8() {
+    tela = 12;
+    clear();
+   
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60); 
+}
+
+function tela_fase_9() {
+    tela = 13;
+    clear();
+  
+    esconder_btn_fases();
+    background(cor_principal);
+    image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
 // Criando funções para os botões
@@ -180,17 +318,73 @@ function tela_fase_1() {
 function esconder_menu() {
     // Esconder menu
     btn_voltar.show();
+    btn_voltar2.hide();
     btn_jogar.hide();
     btn_instrucoes.hide();
     btn_creditos.hide();
     btn_fase1.hide();
+    btn_fase2.hide();
+    btn_fase3.hide();
+    btn_fase4.hide();
+    btn_fase5.hide();
+    btn_fase6.hide();
+    btn_fase7.hide();
+    btn_fase8.hide();
+    btn_fase9.hide();
 }
 
 function mostrar_menu() {
     // Exibir menu
     btn_voltar.hide();
+    btn_voltar2.hide();
     btn_jogar.show();
     btn_instrucoes.show();
     btn_creditos.show();
     btn_fase1.hide();
+    btn_fase2.hide();
+    btn_fase3.hide();
+    btn_fase4.hide();
+    btn_fase5.hide();
+    btn_fase6.hide();
+    btn_fase7.hide();
+    btn_fase8.hide();
+    btn_fase9.hide();
+}
+
+function esconder_btn_fases() {
+    // Exibir menu
+    btn_voltar.hide();
+    btn_voltar2.show();
+    btn_jogar.hide();
+    btn_instrucoes.hide();
+    btn_creditos.hide();
+    btn_fase1.hide();
+    btn_fase2.hide();
+    btn_fase3.hide();
+    btn_fase4.hide();
+    btn_fase5.hide();
+    btn_fase6.hide();
+    btn_fase7.hide();
+    btn_fase8.hide();
+    btn_fase9.hide();
+}
+
+function mostrar_btn_fases(){
+    //Exibir apenas botôes das fases
+    btn_voltar.show();
+    btn_voltar2.hide();
+    btn_jogar.hide();
+    btn_instrucoes.hide();
+    btn_creditos.hide();
+    btn_fase1.show();
+    btn_fase2.show();
+    btn_fase3.show();
+    btn_fase4.show();
+    btn_fase5.show();
+    btn_fase6.show();
+    btn_fase7.show();
+    btn_fase8.show();
+    btn_fase9.show();
+    
+    
 }

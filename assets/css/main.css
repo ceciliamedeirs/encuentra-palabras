@@ -10,13 +10,15 @@
     font-size: 18px;
     cursor:pointer;
     border-radius: 80px;
-    border: 0;
+    border: 1;
+    border-color: #ff7471;
     transition: 0.2s ease-in-out all;
 }
 
 .btn-jogar:hover {
     background: #ffde39;
     color: #ff7471;
+    border-color: #ffde39;
 }
 
 .btn-voltar {
@@ -27,15 +29,16 @@
     font-size: 15px;
     cursor: pointer;
     border-radius: 80px;
-    border: 0;
+    border: 1;
+    border-color: #ff7471;
     transition: 0.2s ease-in-out all;
 }
   
 .btn-voltar:hover {
     background: #ffde39;
     color: #ff7471;
+    border-color: #ffde39;
 }
-
 
 .btn-fase1 {
     width: 61px;
@@ -45,13 +48,53 @@
     font-size: 40px;
     cursor: pointer;
     border-radius: 80px;
-    border: 0;
+    border: 1;
+    border-color: #ff7471;
     transition: 0.2s ease-in-out all;
 }
   
 .btn-fase1:hover {
     background: #ffde39;
     color: #ff7471;
+    border-color: #ffde39;
 }
+
+.btn-fase2 {
+    width: 61px;
+    height: 61px;
+    background: #bd5957;
+    color: #7A4AB4;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 80px;
+    border: 1;
+    border-color:#ff7471;
+    transition: 0.2s ease-in-out all;
+}
+  
+.btn-fase2:hover {
+    background: #7A4AB4;
+    color: #bd5957;
+   border-color:#bd5957;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
