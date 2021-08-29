@@ -94,3 +94,21 @@
     color: #bd5957;
     border-color:#ffde39;
 }
+
+.btn-frida {
+    background: url('../img/fridaB.png') no-repeat;
+    cursor:pointer;
+    width: 64px;
+    height: 64px;
+    border: none;
+}
+
+.btn-salvador {
+    background: url('../img/salvador.png') no-repeat;
+    cursor:pointer;
+    width: 64px;
+    height: 64px;
+    border: none;
+}
+
+
