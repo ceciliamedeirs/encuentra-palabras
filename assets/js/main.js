@@ -611,7 +611,7 @@ function letras_fase_2(){
     resposta_fase_2.push(this.html());
     console.log(quantidade_acertada_f2.length);
 
-    if ( quantidade_acertada_f2.length <=2 ) {
+    if ( quantidade_acertada_f2.length <=3 ) {
         //Listo
         if ( letrasF2.letra1 == resposta_fase_2[0] && letrasF2.letra2 == resposta_fase_2[1] && letrasF2.letra3 == resposta_fase_2[2] && letrasF2.letra4 == resposta_fase_2[3] && letrasF2.letra5 == resposta_fase_2[4]) {
             resposta_fase_2 = [];
@@ -630,28 +630,10 @@ function letras_fase_2(){
             fill(cor_amarelo);
             text(quantidade_acertada_f2, 700, 150);
         }
-        //Silo
-        if ( letrasF2.letra3 == resposta_fase_2[0] && letrasF2.letra2 == resposta_fase_2[1] && letrasF2.letra1 == resposta_fase_2[2] && letrasF2.letra5 == resposta_fase_2[3] ) {
+          //Lis
+          if ( letrasF2.letra1 == resposta_fase_2[0] && letrasF2.letra2 == resposta_fase_2[1] && letrasF2.letra3 == resposta_fase_2[2] ) {
             resposta_fase_2 = [];
-            quantidade_acertada_f2.push('Silo');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        }
-        //Sito
-        if ( letrasF2.letra3 == resposta_fase_2[0] && letrasF2.letra2 == resposta_fase_2[1] && letrasF2.letra4 == resposta_fase_2[2] && letrasF2.letra5 == resposta_fase_2[3] ) {
-            resposta_fase_2 = [];
-            quantidade_acertada_f2.push('Sito');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        }
-        //Tilo
-        if ( letrasF2.letra4 == resposta_fase_2[0] && letrasF2.letra2 == resposta_fase_2[1] && letrasF2.letra3 == resposta_fase_2[2] && letrasF2.letra5 == resposta_fase_2[3] ) {
-            resposta_fase_2 = [];
-            quantidade_acertada_f2.push('Tilo');
+            quantidade_acertada_f2.push('Lis');
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
@@ -675,16 +657,7 @@ function letras_fase_2(){
             fill(cor_amarelo);
             text(quantidade_acertada_f2, 700, 150);
         }
-        //Tos
-        if ( letrasF2.letra4 == resposta_fase_2[0] && letrasF2.letra5 == resposta_fase_2[1] && letrasF2.letra3 == resposta_fase_2[2] ) {
-            resposta_fase_2 = [];
-            quantidade_acertada_f2.push('Tos');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        }
-        
+      
     } else {
         btn_fase3.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 3.');
@@ -771,25 +744,7 @@ function letras_fase_3(){
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
             text(quantidade_acertada_f3, 700, 150);
-        }  
-        //Raes
-        if ( letrasF3.letra2 == resposta_fase_3[0] && letrasF3.letra5 == resposta_fase_3[1] && letrasF3.letra3 == resposta_fase_3[2] && letrasF3.letra4 == resposta_fase_3[3] ) {
-            resposta_fase_3 = [];
-            quantidade_acertada_f3.push('Raes');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  
-        //Rafe
-        if ( letrasF3.letra2 == resposta_fase_3[0] && letrasF3.letra5 == resposta_fase_3[1] && letrasF3.letra1 == resposta_fase_3[2] && letrasF3.letra3 == resposta_fase_3[3] ) {
-            resposta_fase_3 = [];
-            quantidade_acertada_f3.push('Rafe');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  
+        }   
         //Sera
         if ( letrasF3.letra4 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra2 == resposta_fase_3[2] && letrasF3.letra5 == resposta_fase_3[3] ) {
             resposta_fase_3 = [];
@@ -799,6 +754,15 @@ function letras_fase_3(){
             fill(cor_amarelo);
             text(quantidade_acertada_f3, 700, 150);
         }  
+          //Fea
+          if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2]&& letrasF3.letra4 == resposta_fase_3[2] ) {
+            resposta_fase_3 = [];
+            quantidade_acertada_f3.push('Feas');
+            fill(cor_secundaria);
+            rect(largura_central-250, 135, 500, 20);
+            fill(cor_amarelo);
+            text(quantidade_acertada_f3, 700, 150);
+        } 
         //Era
         if ( letrasF3.letra3 == resposta_fase_3[0] && letrasF3.letra2 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
@@ -816,16 +780,7 @@ function letras_fase_3(){
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
             text(quantidade_acertada_f3, 700, 150);
-        }  
-        //Fas
-        if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra5 == resposta_fase_3[1] && letrasF3.letra4 == resposta_fase_3[2] ) {
-            resposta_fase_3 = [];
-            quantidade_acertada_f3.push('Fas');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  
+        }    
         //Fea
         if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
@@ -835,24 +790,15 @@ function letras_fase_3(){
             fill(cor_amarelo);
             text(quantidade_acertada_f3, 700, 150);
         }  
-        //Ras
-        if ( letrasF3.letra2 == resposta_fase_3[0] && letrasF3.letra5 == resposta_fase_3[1] && letrasF3.letra4 == resposta_fase_3[2] ) {
+        //Sea
+        if ( letrasF3.letra4 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            quantidade_acertada_f3.push('Ras');
+            quantidade_acertada_f3.push('Sea');
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
             text(quantidade_acertada_f3, 700, 150);
         }  
-        //Res
-        if ( letrasF3.letra2 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra4 == resposta_fase_3[2] ) {
-            resposta_fase_3 = [];
-            quantidade_acertada_f3.push('Res');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        } 
         //Ser
         if ( letrasF3.letra4 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra2 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
@@ -931,10 +877,10 @@ function letras_fase_4(){
             fill(cor_amarelo);
             text(quantidade_acertada_f4, 700, 150);
         }  
-         //Heno
+         //Ceno
          if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra5 == resposta_fase_4[1] && letrasF4.letra1 == resposta_fase_4[2] && letrasF4.letra2 == resposta_fase_4[3] ) {
             resposta_fase_4 = [];
-            quantidade_acertada_f4.push('Heno');
+            quantidade_acertada_f4.push('Ceno');
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
@@ -949,6 +895,15 @@ function letras_fase_4(){
             fill(cor_amarelo);
             text(quantidade_acertada_f4, 700, 150);
         }  
+         //Che
+         if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra4 == resposta_fase_4[1] && letrasF4.letra5 == resposta_fase_4[2] ) {
+            resposta_fase_4 = [];
+            quantidade_acertada_f4.push('Che');
+            fill(cor_secundaria);
+            rect(largura_central-250, 135, 500, 20);
+            fill(cor_amarelo);
+            text(quantidade_acertada_f4, 700, 150);
+        } 
          //Con
          if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra2 == resposta_fase_4[1] && letrasF4.letra1 == resposta_fase_4[2] ) {
             resposta_fase_4 = [];
@@ -1035,28 +990,10 @@ function letras_fase_5(){
             fill(cor_amarelo);
             text(quantidade_acertada_f5, 700, 150);
         }
-         //Podre
-         if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra5 == resposta_fase_5[3] && letrasF5.letra4 == resposta_fase_5[4]) {
+         //Pode
+         if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra4 == resposta_fase_5[3] ) {
             resposta_fase_5 = [];
-            quantidade_acertada_f5.push('Podre');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }
-         //Dope
-         if ( letrasF5.letra3 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra1 == resposta_fase_5[2] && letrasF5.letra4 == resposta_fase_5[3]) {
-            resposta_fase_5 = [];
-            quantidade_acertada_f5.push('Dope');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }
-         //Odre
-         if ( letrasF5.letra2 == resposta_fase_5[0] && letrasF5.letra3 == resposta_fase_5[1] && letrasF5.letra5 == resposta_fase_5[2] && letrasF5.letra4 == resposta_fase_5[3] ) {
-            resposta_fase_5 = [];
-            quantidade_acertada_f5.push('Odre');
+            quantidade_acertada_f5.push('Pode');
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
@@ -1107,19 +1044,19 @@ function letras_fase_5(){
             fill(cor_amarelo);
             text(quantidade_acertada_f5, 700, 150);
         }
-         //Pro
-         if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra5 == resposta_fase_5[1] && letrasF5.letra2 == resposta_fase_5[2] ) {
+         //Red
+         if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] ) {
             resposta_fase_5 = [];
-            quantidade_acertada_f5.push('Pro');
+            quantidade_acertada_f5.push('Red');
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
             text(quantidade_acertada_f5, 700, 150);
         }
-         //Reo
-         if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra2 == resposta_fase_5[2] ) {
+        //Roe
+        if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra4 == resposta_fase_5[2] ) {
             resposta_fase_5 = [];
-            quantidade_acertada_f5.push('Reo');
+            quantidade_acertada_f5.push('Roe')
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
@@ -1197,6 +1134,24 @@ function letras_fase_6(){
         if ( letrasF6.letra4 == resposta_fase_6[0] && letrasF6.letra2 == resposta_fase_6[1] && letrasF6.letra1 == resposta_fase_6[2] && letrasF6.letra3 == resposta_fase_6[3]) {
             resposta_fase_6 = [];
             quantidade_acertada_f6.push('Nube');
+            fill(cor_secundaria);
+            rect(largura_central-250, 135, 500, 20);
+            fill(cor_amarelo);
+            text(quantidade_acertada_f6, 700, 150);
+        }
+        //Neo
+        if ( letrasF6.letra4 == resposta_fase_6[0] && letrasF6.letra3 == resposta_fase_6[1] && letrasF6.letra5 == resposta_fase_6[2] ) {
+            resposta_fase_6 = [];
+            quantidade_acertada_f6.push('Neo');
+            fill(cor_secundaria);
+            rect(largura_central-250, 135, 500, 20);
+            fill(cor_amarelo);
+            text(quantidade_acertada_f6, 700, 150);
+        }
+        //Une
+        if ( letrasF6.letra2 == resposta_fase_6[0] && letrasF6.letra4 == resposta_fase_6[1] && letrasF6.letra3 == resposta_fase_6[2] ) {
+            resposta_fase_6 = [];
+            quantidade_acertada_f6.push('Une');
             fill(cor_secundaria);
             rect(largura_central-250, 135, 500, 20);
             fill(cor_amarelo);
