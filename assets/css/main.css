@@ -111,4 +111,22 @@
     border: none;
 }
 
+.btn-frida[disabled] {
+    background: url('../img/fridaB.png') no-repeat;
+    cursor: no-drop;
+}
 
+.btn-frida[disabled]:hover {
+    background: url('../img/fridaB.png') no-repeat;
+    border-color: unset;
+}
+
+.btn-salvador[disabled] {
+    background: url('../img/salvador.png') no-repeat;
+    cursor: no-drop;
+}
+
+.btn-salvador[disabled]:hover {
+    background: url('../img/salvador.png') no-repeat;
+    border-color: unset;
+}
