@@ -1,5 +1,5 @@
-//CONFIGURAÇÕES INICIAIS
-//VARIÁVEIS PARA O CANVA (TELA)
+// CONFIGURAÇÕES INICIAIS
+// VARIÁVEIS PARA O CANVA (TELA)
 let canva;
 let tela = 1;
 let x = 100;
@@ -7,12 +7,12 @@ let y = 100;
 let largura_central = (window.innerWidth/2);
 let altura_central = (window.innerHeight/2);
 
-//VARIÁVEIS PARA AS CORES
+// VARIÁVEIS PARA AS CORES
 let cor_principal = '#7A4AB4';
 let cor_secundaria = '#ff7471';
 let cor_amarelo = '#ffde39';
 
-//VARIÁVEIS PARAA AS CONFIGURAÇÕES DOS BOTÕES 
+// VARIÁVEIS PARAA AS CONFIGURAÇÕES DOS BOTÕES 
 let btn_iniciar_largura = 200;
 let btn_iniciar_posicaoX = (window.innerWidth/1.5) - (btn_iniciar_largura/1.5);
 let btn_voltar;
@@ -32,18 +32,18 @@ let btn_creditos;
 let btn_frida;
 let btn_salvador;
 
-//PARA CENTRALIZAR O CANVA 
+// PARA CENTRALIZAR O CANVA 
 function centerCanvas() {
     let canva_x = (windowWidth - width) / 2;
     let canva_y = (windowHeight - height) / 2;
     canva.position(canva_x, canva_y);
 }
 
-//ADICIONANDO ASSETS NO PRELOAD
+// ADICIONANDO ASSETS NO PRELOAD
 let font_regular;
 
 function preload() {
-    //PARA CARREGAR FONTES E IMAGENS
+    // PARA CARREGAR FONTES E IMAGENS
     font_regular = loadFont('assets/fonts/LondrinaSolid-Regular.ttf');
     logo = loadImage('assets/img/logo.png');
     tela_jogo_progresso = loadImage('assets/img/tela-jogo-progresso.svg');
@@ -55,48 +55,48 @@ function preload() {
 }
 
 function setup() {
-    //PARA CRIAR CANVA
+    // PARA CRIAR CANVA
     canva = createCanvas(windowWidth, windowHeight);
     centerCanvas();
 
-    //BOTÃO VOLTAR PARA MENU
+    // BOTÃO VOLTAR PARA MENU
     btn_voltar = createButton("VOLTAR");
     btn_voltar.position(20, 74);
     btn_voltar.addClass("btn btn-voltar");
     btn_voltar.mousePressed(tela_inicial);
     
-    //BOTÃO VOLTAR PARA TELA DE FASES
+    // BOTÃO VOLTAR PARA TELA DE FASES
     btn_voltar2 = createButton("VOLTAR");
     btn_voltar2.position(20, 71);
     btn_voltar2.addClass("btn btn-voltar");
     btn_voltar2.mousePressed(tela_fases);
 
-    //BOTÃO JOGAR
+    // BOTÃO JOGAR
     btn_jogar = createButton('JOGAR');
     btn_jogar.position(btn_iniciar_posicaoX, 210);
     btn_jogar.addClass("btn btn-jogar");
     btn_jogar.mousePressed(tela_fases);
     
-    //BOTÃO INSTRUÇÕES
+    // BOTÃO INSTRUÇÕES
     btn_instrucoes = createButton('INSTRUÇÕES');
     btn_instrucoes.position(btn_iniciar_posicaoX, 290);
     btn_instrucoes.addClass("btn btn-jogar");
     btn_instrucoes.mousePressed(tela_instrucoes);
     
-    //BOTÃO CRÉDITOS
+    // BOTÃO CRÉDITOS
     btn_creditos = createButton('CRÉDITOS');
     btn_creditos.position(btn_iniciar_posicaoX, 370);
     btn_creditos.addClass("btn btn-jogar");
     btn_creditos.mousePressed(tela_creditos);
 
-    //BOTÃO RECOMPENSA FRIDA KAHLO
+    // BOTÃO RECOMPENSA FRIDA KAHLO
     btn_frida = createButton('');
     btn_frida.position(773, 219);
     btn_frida.addClass("btn btn-frida");
     btn_frida.mousePressed(tela_frida);
     btn_frida.attribute('disabled', '');
 
-    //BOTÃO RECOMPENSA SALVADOR DALÍ
+    // BOTÃO RECOMPENSA SALVADOR DALÍ
     btn_salvador = createButton('');
     btn_salvador.position(773, 388);
     btn_salvador.addClass("btn btn-salvador");
@@ -139,7 +139,7 @@ function setup() {
     btn_fase6.mousePressed(tela_fase_6);
     btn_fase6.attribute('disabled', '');
 
-    //BOTÕES LETRAS FASE 1
+    // BOTÕES LETRAS FASE 1
     btn_letraA1 = createButton('A');
     btn_letraA1.position(600, 460);
     btn_letraA1.addClass("btn btn-letra");
@@ -165,7 +165,7 @@ function setup() {
     btn_letraN1.addClass("btn btn-letra");
     btn_letraN1.mousePressed(letras_fase_1);
 
-    //BOTÕES LETRAS FASE 2
+    // BOTÕES LETRAS FASE 2
     btn_letraS2 = createButton('S');
     btn_letraS2.position(600, 460);
     btn_letraS2.addClass("btn btn-letra");
@@ -191,7 +191,7 @@ function setup() {
     btn_letraO2.addClass("btn btn-letra");
     btn_letraO2.mousePressed(letras_fase_2);
 
-    //BOTÕES LETRAS FASE 3
+    // BOTÕES LETRAS FASE 3
     btn_letraF3 = createButton('F');
     btn_letraF3.position(600, 460);
     btn_letraF3.addClass("btn btn-letra");
@@ -217,7 +217,7 @@ function setup() {
     btn_letraA3.addClass("btn btn-letra");
     btn_letraA3.mousePressed(letras_fase_3);
 
-    //BOTÕES LETRAS FASE 4
+    // BOTÕES LETRAS FASE 4
     btn_letraN4 = createButton('N');
     btn_letraN4.position(600, 460);
     btn_letraN4.addClass("btn btn-letra");
@@ -243,7 +243,7 @@ function setup() {
     btn_letraE4.addClass("btn btn-letra");
     btn_letraE4.mousePressed(letras_fase_4);
 
-    //BOTÕES LETRAS FASE 5
+    // BOTÕES LETRAS FASE 5
     btn_letraP5 = createButton('P');
     btn_letraP5.position(600, 460);
     btn_letraP5.addClass("btn btn-letra");
@@ -269,7 +269,7 @@ function setup() {
     btn_letraR5.addClass("btn btn-letra");
     btn_letraR5.mousePressed(letras_fase_5);
 
-    //BOTÕES LETRAS FASE 6
+    // BOTÕES LETRAS FASE 6
     btn_letraB6 = createButton('B');
     btn_letraB6.position(600, 460);
     btn_letraB6.addClass("btn btn-letra");
@@ -296,7 +296,6 @@ function setup() {
     btn_letraO6.mousePressed(letras_fase_6);
 
     tela_inicial();
-    // noLoop();
 }
 
 function windowResized() {
@@ -304,34 +303,11 @@ function windowResized() {
 }
   
 function draw() {
-    //Na versão final o jogo estará dentro do draw
-    // Loop aqui...
-    /* if ( tela == 4 ) {
-        if ( keyIsDown(UP_ARROW) ) {
-            y -= 5;
-        }
-        if ( keyIsDown(RIGHT_ARROW) ) {
-            x += 5;
-        }
-        if ( keyIsDown(DOWN_ARROW) ) {
-            y += 5;
-        }
-        if ( keyIsDown(LEFT_ARROW) ) {
-            x -= 5;
-        }
-        esconder_menu();
-        let c = color(255, 204, 0);
-        fill('white');
-        noStroke();
-        ellipse(x, y, 50, 50);
-        esconder_menu();
-        image(tela_jogo_progresso, largura_central, altura_central, 354, 439);
-    } */
+    // Nada aqui...
 }
 
-//CRIANDO FUNÇÕES PARA AS TELAS
-
-//TELA INICIAL (MENU)
+// CRIANDO FUNÇÕES PARA AS TELAS
+// TELA INICIAL (MENU)
 function tela_inicial() {
     tela = 1;
     clear();
@@ -342,7 +318,7 @@ function tela_inicial() {
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
-//TELA INSTRUÇÕES
+// TELA INSTRUÇÕES
 function tela_instrucoes() {
     tela = 2;
     clear();
@@ -369,7 +345,7 @@ function tela_instrucoes() {
     "e saberá um pouco da história dele. Ao completar todas as fases, você irá aprender a escrita de novas palavras da língua espanhola." , 700, 250);
 }
 
-//TELA CRÉDITOS
+// TELA CRÉDITOS
 function tela_creditos() {
     tela = 3;
     clear();
@@ -386,7 +362,7 @@ function tela_creditos() {
     "da disciplina de espanhol, no ano de 2021,  ainda não publicado.", 700, 285);
 }
 
-//TELA FASES
+// TELA FASES
 function tela_fases() {
     tela = 4;
     clear();
@@ -404,11 +380,11 @@ function tela_fases() {
     text("FASES", 645, 103);
 }
 
-//TELA RECOMPENSA (FRIDA KAHLO)
+// TELA RECOMPENSA (FRIDA KAHLO)
 function tela_frida() {
     tela = 11;
     clear();
-    esconder_menu();
+    esconder_btn_fases();
     
     background(cor_principal);
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
@@ -431,14 +407,13 @@ function tela_frida() {
     "cultural europeu. Nos dias atuais, Frida tornou-se símbolo feminista não só pelas pinturas, mas por seu engajamento e empoderamento social" + "\n" +
     "diante a um cenário ainda conservador. Frida Kahlo morreu na cidade de Coyoacán, no México, em 13 de julho de 1954" + "\n" + 
     "e é até hoje uma grande inspiração para muitas mulheres.", 665, 250);
-
 }
 
-//TELA RECOMPENSA (SALVADOR DALÍ)
+// TELA RECOMPENSA (SALVADOR DALÍ)
 function tela_salvador() {
     tela = 12;
     clear();
-    esconder_menu();
+    esconder_btn_fases();
     
     background(cor_principal);
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
@@ -461,7 +436,7 @@ function tela_salvador() {
     "seu teatro-museu. Suas últimas obras datam de 1983 E até hoje suas obras são lembradas e apreciadas por muitos.", 665, 250);
 }
 
-//FASE 1
+// FASE 1
 const letrasf1 = {
     'letra1': 'A',
     'letra2': 'L',
@@ -475,8 +450,6 @@ let quantidade_acertada = [];
 
 function tela_fase_1() {
     tela = 5;
-    let img_jogo_x = largura_central - 215;
-    let img_jogo_y = altura_central - 225;
     clear();
     
     esconder_btn_fases();
@@ -486,6 +459,12 @@ function tela_fase_1() {
     btn_letraU1.show();
     btn_letraN1.show();
     
+    btn_letraA1.mouseOver(letras_fase_1);
+    btn_letraL1.mouseOver(letras_fase_1);
+    btn_letraG1.mouseOver(letras_fase_1);
+    btn_letraU1.mouseOver(letras_fase_1);
+    btn_letraN1.mouseOver(letras_fase_1);
+
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -501,98 +480,118 @@ function tela_fase_1() {
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
-function letras_fase_1(){
-    
+function letras_fase_1() {
+
     resposta_fase_1.push(this.html());
     console.log(quantidade_acertada.length);
+    this.addClass('active');
 
     if ( quantidade_acertada.length <= 2 ) {
         // Algun
         if ( letrasf1.letra1 == resposta_fase_1[0] && letrasf1.letra2 == resposta_fase_1[1] && letrasf1.letra3 == resposta_fase_1[2] && letrasf1.letra4 == resposta_fase_1[3] && letrasf1.letra5 == resposta_fase_1[4]) {
             resposta_fase_1 = [];
-            if(quantidade_acertada.indexOf('Algun') === -1 ){
+            if ( quantidade_acertada.indexOf('Algun') === -1 ) {
                 quantidade_acertada.push('Algun');
                 fill(cor_secundaria);
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-            }else{
-                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!")
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
             }
         }
+        
         // Gula
-        else if ( letrasf1.letra3 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra2 == resposta_fase_1[2] && letrasf1.letra1 == resposta_fase_1[3]) {
+        if ( letrasf1.letra3 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra2 == resposta_fase_1[2] && letrasf1.letra1 == resposta_fase_1[3]) {
             resposta_fase_1 = [];
-            if(quantidade_acertada.indexOf('Gula') === -1 ){
-            quantidade_acertada.push('Gula');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada, 700, 150);
-        }else{
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada.indexOf('Gula') === -1 ) {
+                quantidade_acertada.push('Gula');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
         // Luna
-        else if ( letrasf1.letra2 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra5 == resposta_fase_1[2] && letrasf1.letra1 == resposta_fase_1[3]) {
+        if ( letrasf1.letra2 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra5 == resposta_fase_1[2] && letrasf1.letra1 == resposta_fase_1[3]) {
             resposta_fase_1 = [];
-            if(quantidade_acertada.indexOf('Luna') === -1 ){
-            quantidade_acertada.push('Luna');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada, 700, 150);
-        }else{
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada.indexOf('Luna') === -1 ) {
+                quantidade_acertada.push('Luna');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         // Nula
-        else if ( letrasf1.letra5 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra2 == resposta_fase_1[2] && letrasf1.letra1 == resposta_fase_1[3]) {
+        if ( letrasf1.letra5 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra2 == resposta_fase_1[2] && letrasf1.letra1 == resposta_fase_1[3]) {
             resposta_fase_1 = [];
-            if(quantidade_acertada.indexOf('Nula') === -1 ){
-            quantidade_acertada.push('Nula');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada, 700, 150);
-        }else{
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada.indexOf('Nula') === -1 ) {
+                quantidade_acertada.push('Nula');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         // Aun
-        else if ( letrasf1.letra1 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra5 == resposta_fase_1[2]) {
+        if ( letrasf1.letra1 == resposta_fase_1[0] && letrasf1.letra4 == resposta_fase_1[1] && letrasf1.letra5 == resposta_fase_1[2]) {
             resposta_fase_1 = [];
-            if(quantidade_acertada.indexOf('Aun') === -1 ){
-            quantidade_acertada.push('Aun');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada, 700, 150);
-        }else{
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada.indexOf('Aun') === -1 ) {
+                quantidade_acertada.push('Aun');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         // Una
-        else if ( letrasf1.letra4 == resposta_fase_1[0] && letrasf1.letra5 == resposta_fase_1[1] && letrasf1.letra1 == resposta_fase_1[2]) {
+        if ( letrasf1.letra4 == resposta_fase_1[0] && letrasf1.letra5 == resposta_fase_1[1] && letrasf1.letra1 == resposta_fase_1[2]) {
             resposta_fase_1 = [];
-            if(quantidade_acertada.indexOf('Una') === -1 ){
-            quantidade_acertada.push('Una');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada, 700, 150);
-        }else{
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada.indexOf('Una') === -1 ) {
+                quantidade_acertada.push('Una');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }else {
-        if(resposta_fase_1.length >= 5){
-        resposta_fase_1 = [];
-        alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!")
+
+        if ( resposta_fase_1.length >= 5 ) {
+            resposta_fase_1 = [];
+            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
+            btn_remove_active();
         }
-    }
     } else {
         btn_fase2.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 2.');
+        btn_remove_active();
     }
 }
 
@@ -619,6 +618,12 @@ function tela_fase_2() {
     btn_letraN2.show();
     btn_letraO2.show();
 
+    btn_letraS2.mouseOver(letras_fase_2);
+    btn_letraU2.mouseOver(letras_fase_2);
+    btn_letraE2.mouseOver(letras_fase_2);
+    btn_letraN2.mouseOver(letras_fase_2);
+    btn_letraO2.mouseOver(letras_fase_2);
+
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -638,83 +643,100 @@ function letras_fase_2(){
 
     resposta_fase_2.push(this.html());
     console.log(quantidade_acertada_f2.length);
+    this.addClass('active');
 
     if ( quantidade_acertada_f2.length <=2 ) {
         //Sueño
         if ( letrasF2.letra1 == resposta_fase_2[0] && letrasF2.letra2 == resposta_fase_2[1] && letrasF2.letra3 == resposta_fase_2[2] && letrasF2.letra4 == resposta_fase_2[3] && letrasF2.letra5 == resposta_fase_2[4]) {
             resposta_fase_2 = [];
-            if(quantidade_acertada_f2.indexOf('Sueno') === -1 ){
-            quantidade_acertada_f2.push('Sueno');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        } else{
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f2.indexOf('Sueno') === -1 ) {
+                quantidade_acertada_f2.push('Sueno');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f2, 700, 150);
+                btn_remove_active();
+            } else{
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-          //Eso
-          if ( letrasF2.letra3 == resposta_fase_2[0] && letrasF2.letra1 == resposta_fase_2[1] && letrasF2.letra5 == resposta_fase_2[2] ) {
+        
+        //Eso
+        if ( letrasF2.letra3 == resposta_fase_2[0] && letrasF2.letra1 == resposta_fase_2[1] && letrasF2.letra5 == resposta_fase_2[2] ) {
             resposta_fase_2 = [];
-            if(quantidade_acertada_f2.indexOf('Eso') === -1 ){
-            quantidade_acertada_f2.push('Eso');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f2.indexOf('Eso') === -1 ) {
+                quantidade_acertada_f2.push('Eso');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f2, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
         //Seo
         if ( letrasF2.letra1 == resposta_fase_2[0] && letrasF2.letra3 == resposta_fase_2[1] && letrasF2.letra5 == resposta_fase_2[2] ) {
             resposta_fase_2 = [];
-            if(quantidade_acertada_f2.indexOf('Seo') === -1 ){
-            quantidade_acertada_f2.push('Seo');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f2.indexOf('Seo') === -1 ){
+                quantidade_acertada_f2.push('Seo');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f2, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
         //Use
         if ( letrasF2.letra2 == resposta_fase_2[0] && letrasF2.letra1 == resposta_fase_2[1] && letrasF2.letra3 == resposta_fase_2[2] ) {
             resposta_fase_2 = [];
-            if(quantidade_acertada_f2.indexOf('Use') === -1 ){
-            quantidade_acertada_f2.push('Use');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f2, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f2.indexOf('Use') === -1 ) {
+                quantidade_acertada_f2.push('Use');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f2, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    } //Uso
-    if ( letrasF2.letra2 == resposta_fase_2[0] && letrasF2.letra1 == resposta_fase_2[1] && letrasF2.letra5 == resposta_fase_2[2] ) {
-        resposta_fase_2 = [];
-        if(quantidade_acertada_f2.indexOf('Uso') === -1 ){
-        quantidade_acertada_f2.push('Uso');
-        fill(cor_secundaria);
-        rect(largura_central-250, 135, 500, 20);
-        fill(cor_amarelo);
-        text(quantidade_acertada_f2, 700, 150);
-    }else {
-        alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-    }
-}else {
-        if(resposta_fase_2.length >= 5){
+
+        //Uso
+        if ( letrasF2.letra2 == resposta_fase_2[0] && letrasF2.letra1 == resposta_fase_2[1] && letrasF2.letra5 == resposta_fase_2[2] ) {
             resposta_fase_2 = [];
-            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!")
+            if ( quantidade_acertada_f2.indexOf('Uso') === -1 ) {
+                quantidade_acertada_f2.push('Uso');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f2, 700, 150);
+                btn_remove_active();
+            }else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
+        if ( resposta_fase_2.length >= 5 ) {
+            resposta_fase_2 = [];
+            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
+            btn_remove_active();
+        }
     } else {
         btn_fase3.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 3.');
+        btn_remove_active();
     }
-     
-} 
+}
 
 //FASE 3
 const letrasF3 = {
@@ -739,6 +761,12 @@ function tela_fase_3() {
     btn_letraS3.show();
     btn_letraA3.show();
 
+    btn_letraF3.mouseOver(letras_fase_3);
+    btn_letraR3.mouseOver(letras_fase_3);
+    btn_letraE3.mouseOver(letras_fase_3);
+    btn_letraS3.mouseOver(letras_fase_3);
+    btn_letraA3.mouseOver(letras_fase_3);
+
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -754,165 +782,199 @@ function tela_fase_3() {
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
-function letras_fase_3(){
+function letras_fase_3() {
     
     resposta_fase_3.push(this.html());
     console.log(quantidade_acertada_f3.length);
+    this.addClass('active');
 
     if ( quantidade_acertada_f3.length <=2 ) {
         //Fresa
         if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra2 == resposta_fase_3[1] && letrasF3.letra3 == resposta_fase_3[2] && letrasF3.letra4 == resposta_fase_3[3] && letrasF3.letra5 == resposta_fase_3[4]) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Fresa') === -1 ){
-            quantidade_acertada_f3.push('Fresa');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
+            if ( quantidade_acertada_f3.indexOf('Fresa') === -1 ) {
+                quantidade_acertada_f3.push('Fresa');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
             }
         }
+
         //Frase
         if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra2 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] && letrasF3.letra4 == resposta_fase_3[3] && letrasF3.letra3 == resposta_fase_3[4]) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Frase') === -1 ){
-            quantidade_acertada_f3.push('Frase');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Frase') === -1 ) {
+                quantidade_acertada_f3.push('Frase');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
         //Eras
         if ( letrasF3.letra3 == resposta_fase_3[0] && letrasF3.letra2 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] && letrasF3.letra4 == resposta_fase_3[3] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Eras') === -1 ){
-            quantidade_acertada_f3.push('Eras');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Eras') === -1 ) {
+                quantidade_acertada_f3.push('Eras');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            }  else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
         //Fase
         if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra5 == resposta_fase_3[1] && letrasF3.letra4 == resposta_fase_3[2] && letrasF3.letra3 == resposta_fase_3[3] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Fase') === -1 ){
-            quantidade_acertada_f3.push('Fase');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        } else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Fase') === -1 ) {
+                quantidade_acertada_f3.push('Fase');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }  
+
         //Sera
         if ( letrasF3.letra4 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra2 == resposta_fase_3[2] && letrasF3.letra5 == resposta_fase_3[3] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Sera') === -1 ){
-            quantidade_acertada_f3.push('Sera');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-        }
-    }  
-          //Fea
-          if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2]&& letrasF3.letra4 == resposta_fase_3[2] ) {
+            if ( quantidade_acertada_f3.indexOf('Sera') === -1 ) {
+                quantidade_acertada_f3.push('Sera');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            }  else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
+        }  
+        
+        //Fea
+        if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2]&& letrasF3.letra4 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Feas') === -1 ){
-            quantidade_acertada_f3.push('Feas');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        } else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Feas') === -1 ) {
+                quantidade_acertada_f3.push('Feas');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    } 
+
         //Era
         if ( letrasF3.letra3 == resposta_fase_3[0] && letrasF3.letra2 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Era') === -1 ){
-            quantidade_acertada_f3.push('Era');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Era') === -1 ) {
+                quantidade_acertada_f3.push('Era');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    } 
+
         //Esa
         if ( letrasF3.letra3 == resposta_fase_3[0] && letrasF3.letra4 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Esa') === -1 ){
-            quantidade_acertada_f3.push('Esa');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Esa') === -1 ) {
+                quantidade_acertada_f3.push('Esa');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }  
+
         //Fea
         if ( letrasF3.letra1 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Fea') === -1 ){
-            quantidade_acertada_f3.push('Fea');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }   else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Fea') === -1 ) {
+                quantidade_acertada_f3.push('Fea');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    } 
+
         //Sea
         if ( letrasF3.letra4 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra5 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Sea') === -1 ){
-            quantidade_acertada_f3.push('Sea');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        }   else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Sea') === -1 ) {
+                quantidade_acertada_f3.push('Sea');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+
         //Ser
         if ( letrasF3.letra4 == resposta_fase_3[0] && letrasF3.letra3 == resposta_fase_3[1] && letrasF3.letra2 == resposta_fase_3[2] ) {
             resposta_fase_3 = [];
-            if(quantidade_acertada_f3.indexOf('Ser') === -1 ){
-            quantidade_acertada_f3.push('Ser');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f3, 700, 150);
-        } else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f3.indexOf('Ser') === -1 ) {
+                quantidade_acertada_f3.push('Ser');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f3, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
+        }
+
+        if ( resposta_fase_3.length >= 5 ) {
+            resposta_fase_3 = [];
+            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
+            btn_remove_active();
         }
     } else {
-        if(resposta_fase_3.length >= 5){
-            resposta_fase_3 = [];
-            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!")
-        }
-    }
-    }else {
         btn_fase4.removeAttribute('disabled', '');
-        // btn_frida.imageObject('disabled', '');
         btn_frida.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 4.');
+        btn_remove_active();
     }
 } 
 
@@ -939,6 +1001,12 @@ function tela_fase_4() {
     btn_letraH4.show();
     btn_letraE4.show();
 
+    btn_letraN4.mouseOver(letras_fase_4);
+    btn_letraO4.mouseOver(letras_fase_4);
+    btn_letraC4.mouseOver(letras_fase_4);
+    btn_letraH4.mouseOver(letras_fase_4);
+    btn_letraE4.mouseOver(letras_fase_4);
+
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -954,111 +1022,133 @@ function tela_fase_4() {
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
-function letras_fase_4(){
+function letras_fase_4() {
     
     resposta_fase_4.push(this.html());
     console.log(quantidade_acertada_f4.length);
+    this.addClass('active');
 
     if ( quantidade_acertada_f4.length <=2 ) {
         //Noche
-       if ( letrasF4.letra1 == resposta_fase_4[0] && letrasF4.letra2 == resposta_fase_4[1] && letrasF4.letra3 == resposta_fase_4[2] && letrasF4.letra4 == resposta_fase_4[3] && letrasF4.letra5 == resposta_fase_4[4]) {
+        if ( letrasF4.letra1 == resposta_fase_4[0] && letrasF4.letra2 == resposta_fase_4[1] && letrasF4.letra3 == resposta_fase_4[2] && letrasF4.letra4 == resposta_fase_4[3] && letrasF4.letra5 == resposta_fase_4[4]) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Noche') === -1 ){
-            quantidade_acertada_f4.push('Noche');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f4.indexOf('Noche') === -1 ) {
+                quantidade_acertada_f4.push('Noche');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
         //Echo
-        else if ( letrasF4.letra5 == resposta_fase_4[0] && letrasF4.letra3 == resposta_fase_4[1] && letrasF4.letra4 == resposta_fase_4[2] && letrasF4.letra2 == resposta_fase_4[3] ) {
+        if ( letrasF4.letra5 == resposta_fase_4[0] && letrasF4.letra3 == resposta_fase_4[1] && letrasF4.letra4 == resposta_fase_4[2] && letrasF4.letra2 == resposta_fase_4[3] ) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Echo') === -1 ){
-            quantidade_acertada_f4.push('Echo');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        }   else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f4.indexOf('Echo') === -1 ) {
+                quantidade_acertada_f4.push('Echo');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Ceno
-         else if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra5 == resposta_fase_4[1] && letrasF4.letra1 == resposta_fase_4[2] && letrasF4.letra2 == resposta_fase_4[3] ) {
+        
+        //Ceno
+        if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra5 == resposta_fase_4[1] && letrasF4.letra1 == resposta_fase_4[2] && letrasF4.letra2 == resposta_fase_4[3] ) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Ceno') === -1 ){
-            quantidade_acertada_f4.push('Ceno');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        }   else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f4.indexOf('Ceno') === -1 ) {
+                quantidade_acertada_f4.push('Ceno');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Once
-         else if ( letrasF4.letra2 == resposta_fase_4[0] && letrasF4.letra1 == resposta_fase_4[1] && letrasF4.letra3 == resposta_fase_4[2] && letrasF4.letra5 == resposta_fase_4[3] ) {
+
+        //Once
+        if ( letrasF4.letra2 == resposta_fase_4[0] && letrasF4.letra1 == resposta_fase_4[1] && letrasF4.letra3 == resposta_fase_4[2] && letrasF4.letra5 == resposta_fase_4[3] ) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Once') === -1 ){
-            quantidade_acertada_f4.push('Once');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f4.indexOf('Once') === -1 ) {
+                quantidade_acertada_f4.push('Once');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Che
-         else if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra4 == resposta_fase_4[1] && letrasF4.letra5 == resposta_fase_4[2] ) {
+        
+        //Che
+        if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra4 == resposta_fase_4[1] && letrasF4.letra5 == resposta_fase_4[2] ) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Che') === -1 ){
-            quantidade_acertada_f4.push('Che');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        } else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f4.indexOf('Che') === -1 ) {
+                quantidade_acertada_f4.push('Che');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Con
-         else if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra2 == resposta_fase_4[1] && letrasF4.letra1 == resposta_fase_4[2] ) {
+
+        //Con
+        if ( letrasF4.letra3 == resposta_fase_4[0] && letrasF4.letra2 == resposta_fase_4[1] && letrasF4.letra1 == resposta_fase_4[2] ) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Con') === -1 ){
-            quantidade_acertada_f4.push('Con');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        }   else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f4.indexOf('Con') === -1 ) {
+                quantidade_acertada_f4.push('Con');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Eco
-         else if ( letrasF4.letra5 == resposta_fase_4[0] && letrasF4.letra3 == resposta_fase_4[1] && letrasF4.letra2 == resposta_fase_4[2] ) {
+
+        //Eco
+        if ( letrasF4.letra5 == resposta_fase_4[0] && letrasF4.letra3 == resposta_fase_4[1] && letrasF4.letra2 == resposta_fase_4[2] ) {
             resposta_fase_4 = [];
-            if(quantidade_acertada_f4.indexOf('Eco') === -1 ){
-            quantidade_acertada_f4.push('Eco');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f4, 700, 150);
-        }  else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if (quantidade_acertada_f4.indexOf('Eco') === -1 ) {
+                quantidade_acertada_f4.push('Eco');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f4, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }else {
-        if(resposta_fase_4.length >= 5){
+        
+        if ( resposta_fase_4.length >= 5 ) {
             resposta_fase_4 = [];
-            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!")
+            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
+            btn_remove_active();
         }
-    }
     } else {
         btn_fase5.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 5.');
+        btn_remove_active();
     }
 } 
 
@@ -1084,6 +1174,12 @@ function tela_fase_5() {
     btn_letraD5.show();
     btn_letraE5.show();
     btn_letraR5.show();
+
+    btn_letraP5.mouseOver(letras_fase_5);
+    btn_letraO5.mouseOver(letras_fase_5);
+    btn_letraD5.mouseOver(letras_fase_5);
+    btn_letraE5.mouseOver(letras_fase_5);
+    btn_letraR5.mouseOver(letras_fase_5);
    
     background(cor_principal);
     noStroke();
@@ -1100,151 +1196,182 @@ function tela_fase_5() {
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
-function letras_fase_5(){
+function letras_fase_5() {
 
     resposta_fase_5.push(this.html());
     console.log(quantidade_acertada_f5.length);
+    this.addClass('active');
 
     if ( quantidade_acertada_f5.length <=2 ) {
         //Poder
         if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra4 == resposta_fase_5[3] && letrasF5.letra5 == resposta_fase_5[4]) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Poder') === -1 ){
-            quantidade_acertada_f5.push('Poder');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Poder') === -1 ) {
+                quantidade_acertada_f5.push('Poder');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            }else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Pedro
-        else if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra5 == resposta_fase_5[3] && letrasF5.letra2 == resposta_fase_5[4]) {
+        
+        //Pedro
+        if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra5 == resposta_fase_5[3] && letrasF5.letra2 == resposta_fase_5[4]) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Pedro') === -1 ){
-            quantidade_acertada_f5.push('Pedro');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Pedro') === -1 ) {
+                quantidade_acertada_f5.push('Pedro');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Pode
-         else if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra4 == resposta_fase_5[3] ) {
+        
+        //Pode
+        if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra4 == resposta_fase_5[3] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Pode') === -1 ){
-            quantidade_acertada_f5.push('Pode');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Pode') === -1 ) {
+                quantidade_acertada_f5.push('Pode');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Pedo
-        else if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra2 == resposta_fase_5[3] ) {
+        
+        //Pedo
+        if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] && letrasF5.letra2 == resposta_fase_5[3] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Pedo') === -1 ){
-            quantidade_acertada_f5.push('Pedo');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Pedo') === -1 ) {
+                quantidade_acertada_f5.push('Pedo');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            }else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Peor
-        else if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra2 == resposta_fase_5[2] && letrasF5.letra5 == resposta_fase_5[3] ) {
+        
+        //Peor
+        if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra2 == resposta_fase_5[2] && letrasF5.letra5 == resposta_fase_5[3] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Peor') === -1 ){
-            quantidade_acertada_f5.push('Peor');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Peor') === -1 ) {
+                quantidade_acertada_f5.push('Peor');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Pero
-        else if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra5 == resposta_fase_5[2] && letrasF5.letra2 == resposta_fase_5[3] ) {
+        
+        //Pero
+        if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra5 == resposta_fase_5[2] && letrasF5.letra2 == resposta_fase_5[3] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Pero') === -1 ){
-            quantidade_acertada_f5.push('Pero');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Pero') === -1 ) {
+                quantidade_acertada_f5.push('Pero');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Ore
-         else if ( letrasF5.letra2 == resposta_fase_5[0] && letrasF5.letra5 == resposta_fase_5[1] && letrasF5.letra4 == resposta_fase_5[2] ) {
+        
+        //Ore
+        if ( letrasF5.letra2 == resposta_fase_5[0] && letrasF5.letra5 == resposta_fase_5[1] && letrasF5.letra4 == resposta_fase_5[2] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Ore') === -1 ){
-            quantidade_acertada_f5.push('Ore');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Ore') === -1 ) {
+                quantidade_acertada_f5.push('Ore');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Por
-        else if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra5 == resposta_fase_5[2] ) {
+        
+        //Por
+        if ( letrasF5.letra1 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra5 == resposta_fase_5[2] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Por') === -1 ){
-            quantidade_acertada_f5.push('Por');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Por') === -1 ) {
+                quantidade_acertada_f5.push('Por');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
-         //Red
-        else if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] ) {
+        
+        //Red
+        if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra4 == resposta_fase_5[1] && letrasF5.letra3 == resposta_fase_5[2] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Red') === -1 ){
-            quantidade_acertada_f5.push('Red');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f5.indexOf('Red') === -1 ) {
+                quantidade_acertada_f5.push('Red');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         //Roe
-        else if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra4 == resposta_fase_5[2] ) {
+        if ( letrasF5.letra5 == resposta_fase_5[0] && letrasF5.letra2 == resposta_fase_5[1] && letrasF5.letra4 == resposta_fase_5[2] ) {
             resposta_fase_5 = [];
-            if(quantidade_acertada_f5.indexOf('Roe') === -1 ){
-            quantidade_acertada_f5.push('Roe')
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f5, 700, 150);
+            if ( quantidade_acertada_f5.indexOf('Roe') === -1 ) {
+                quantidade_acertada_f5.push('Roe')
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f5, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-        else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-        }
-    }else {
-        if(resposta_fase_5.length >= 5){
+        
+        if ( resposta_fase_5.length >= 5 ) {
             resposta_fase_5 = [];
-            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!")
+            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
+            btn_remove_active();
         }
-    }
-    }else {
+    } else {
         btn_fase6.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 6.');
+        btn_remove_active();
     }
 } 
 
@@ -1270,6 +1397,12 @@ function tela_fase_6() {
     btn_letraE6.show();
     btn_letraN6.show();
     btn_letraO6.show();
+
+    btn_letraB6.mouseOver(letras_fase_6);
+    btn_letraU6.mouseOver(letras_fase_6);
+    btn_letraE6.mouseOver(letras_fase_6);
+    btn_letraN6.mouseOver(letras_fase_6);
+    btn_letraO6.mouseOver(letras_fase_6);
    
     background(cor_principal);
     noStroke();
@@ -1286,104 +1419,123 @@ function tela_fase_6() {
     image(bg_pixel, 0, windowHeight-60, windowWidth, 60);
 }
 
-function letras_fase_6(){
+function letras_fase_6() {
     
     resposta_fase_6.push(this.html());
     console.log(quantidade_acertada_f6.length);
+    this.addClass('active');
 
     if ( quantidade_acertada_f6.length <=2 ) {
         //Bueno
         if ( letrasF6.letra1 == resposta_fase_6[0] && letrasF6.letra2 == resposta_fase_6[1] && letrasF6.letra3 == resposta_fase_6[2] && letrasF6.letra4 == resposta_fase_6[3] && letrasF6.letra5 == resposta_fase_6[4]) {
             resposta_fase_6 = [];
-            if(quantidade_acertada_f6.indexOf('Bueno') === -1 ){
-            quantidade_acertada_f6.push('Bueno');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f6, 700, 150);
-        } else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if (quantidade_acertada_f6.indexOf('Bueno') === -1 ) {
+                quantidade_acertada_f6.push('Bueno');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f6, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         //Buen
-        else if ( letrasF6.letra1 == resposta_fase_6[0] && letrasF6.letra2 == resposta_fase_6[1] && letrasF6.letra3 == resposta_fase_6[2] && letrasF6.letra4 == resposta_fase_6[3]) {
+        if ( letrasF6.letra1 == resposta_fase_6[0] && letrasF6.letra2 == resposta_fase_6[1] && letrasF6.letra3 == resposta_fase_6[2] && letrasF6.letra4 == resposta_fase_6[3]) {
             resposta_fase_6 = [];
-            if(quantidade_acertada_f6.indexOf('Buen') === -1 ){
-            quantidade_acertada_f6.push('Buen');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f6, 700, 150);
-        } else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f6.indexOf('Buen') === -1 ) {
+                quantidade_acertada_f6.push('Buen');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f6, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         //Nube
-        else if ( letrasF6.letra4 == resposta_fase_6[0] && letrasF6.letra2 == resposta_fase_6[1] && letrasF6.letra1 == resposta_fase_6[2] && letrasF6.letra3 == resposta_fase_6[3]) {
+        if ( letrasF6.letra4 == resposta_fase_6[0] && letrasF6.letra2 == resposta_fase_6[1] && letrasF6.letra1 == resposta_fase_6[2] && letrasF6.letra3 == resposta_fase_6[3]) {
             resposta_fase_6 = [];
-            if(quantidade_acertada_f6.indexOf('Nube') === -1 ){
-            quantidade_acertada_f6.push('Nube');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f6, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f6.indexOf('Nube') === -1 ) {
+                quantidade_acertada_f6.push('Nube');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f6, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         //Neo
-        else if ( letrasF6.letra4 == resposta_fase_6[0] && letrasF6.letra3 == resposta_fase_6[1] && letrasF6.letra5 == resposta_fase_6[2] ) {
+        if ( letrasF6.letra4 == resposta_fase_6[0] && letrasF6.letra3 == resposta_fase_6[1] && letrasF6.letra5 == resposta_fase_6[2] ) {
             resposta_fase_6 = [];
-            if(quantidade_acertada_f6.indexOf('Neo') === -1 ){
-            quantidade_acertada_f6.push('Neo');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f6, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f6.indexOf('Neo') === -1 ) {
+                quantidade_acertada_f6.push('Neo');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f6, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         //Une
-        else if ( letrasF6.letra2 == resposta_fase_6[0] && letrasF6.letra4 == resposta_fase_6[1] && letrasF6.letra3 == resposta_fase_6[2] ) {
+        if ( letrasF6.letra2 == resposta_fase_6[0] && letrasF6.letra4 == resposta_fase_6[1] && letrasF6.letra3 == resposta_fase_6[2] ) {
             resposta_fase_6 = [];
-            if(quantidade_acertada_f6.indexOf('Une') === -1 ){
-            quantidade_acertada_f6.push('Une');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f6, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f6.indexOf('Une') === -1 ) {
+                quantidade_acertada_f6.push('Une');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f6, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }
+        
         //Uno
         if ( letrasF6.letra2 == resposta_fase_6[0] && letrasF6.letra4 == resposta_fase_6[1] && letrasF6.letra5 == resposta_fase_6[2] ) {
             resposta_fase_6 = [];
-            if(quantidade_acertada_f6.indexOf('Uno') === -1 ){
-            quantidade_acertada_f6.push('Uno');
-            fill(cor_secundaria);
-            rect(largura_central-250, 135, 500, 20);
-            fill(cor_amarelo);
-            text(quantidade_acertada_f6, 700, 150);
-        }else {
-            alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+            if ( quantidade_acertada_f6.indexOf('Uno') === -1 ) {
+                quantidade_acertada_f6.push('Uno');
+                fill(cor_secundaria);
+                rect(largura_central-250, 135, 500, 20);
+                fill(cor_amarelo);
+                text(quantidade_acertada_f6, 700, 150);
+                btn_remove_active();
+            } else {
+                alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
+                btn_remove_active();
+            }
         }
-    }else {
+
         if(resposta_fase_6.length >= 5){
             resposta_fase_6 = [];
-            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!")
+            alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
+            btn_remove_active();
         }
-    }
-    }else {
-        //btn_salvador.removeAttribute('disabled', '');
+    
+    } else {
         btn_salvador.removeAttribute('disabled', '');
         alert('Parabéns, você concluiu todas as fases!.');
+        btn_remove_active();
     }
 }
 
 //FUNÇÕES PARA MOSTRAR E ESCONDER BOTÕES
-
 function esconder_menu() {
     btn_voltar.show();
     btn_voltar2.hide();
@@ -1566,4 +1718,37 @@ function mostrar_btn_fases(){
     btn_letraE6.hide();
     btn_letraN6.hide();
     btn_letraO6.hide();
+}
+
+function btn_remove_active() {
+    btn_letraA1.removeClass('active');
+    btn_letraL1.removeClass('active');
+    btn_letraG1.removeClass('active');
+    btn_letraU1.removeClass('active');
+    btn_letraN1.removeClass('active');
+    btn_letraS2.removeClass('active');
+    btn_letraU2.removeClass('active');
+    btn_letraE2.removeClass('active');
+    btn_letraN2.removeClass('active');
+    btn_letraO2.removeClass('active');
+    btn_letraF3.removeClass('active');
+    btn_letraR3.removeClass('active');
+    btn_letraE3.removeClass('active');
+    btn_letraS3.removeClass('active');
+    btn_letraA3.removeClass('active');
+    btn_letraN4.removeClass('active');
+    btn_letraO4.removeClass('active');
+    btn_letraC4.removeClass('active');
+    btn_letraH4.removeClass('active');
+    btn_letraE4.removeClass('active');
+    btn_letraP5.removeClass('active');
+    btn_letraO5.removeClass('active');
+    btn_letraD5.removeClass('active');
+    btn_letraE5.removeClass('active');
+    btn_letraR5.removeClass('active');
+    btn_letraB6.removeClass('active');
+    btn_letraU6.removeClass('active');
+    btn_letraE6.removeClass('active');
+    btn_letraN6.removeClass('active');
+    btn_letraO6.removeClass('active');
 }

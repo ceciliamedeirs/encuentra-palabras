@@ -89,7 +89,7 @@
     border-color:#ffde39;
 }
 
-.btn-letra:focus {
+.btn-letra.active {
     background: #ffde39;
     color: #bd5957;
     border-color:#ffde39;
@@ -114,19 +114,23 @@
 .btn-frida[disabled] {
     background: url('../img/fridaB.png') no-repeat;
     cursor: no-drop;
+    opacity: 0.5;
 }
 
 .btn-frida[disabled]:hover {
     background: url('../img/fridaB.png') no-repeat;
     border-color: unset;
+    opacity: 0.5;
 }
 
 .btn-salvador[disabled] {
     background: url('../img/salvador.png') no-repeat;
     cursor: no-drop;
+    opacity: 0.5;
 }
 
 .btn-salvador[disabled]:hover {
     background: url('../img/salvador.png') no-repeat;
     border-color: unset;
+    opacity: 0.5;
 }
