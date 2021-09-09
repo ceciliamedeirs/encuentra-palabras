@@ -95,6 +95,26 @@
     border-color:#ffde39;
 }
 
+.btn-letra6 {
+    width: 59px;
+    height: 59px;
+    background: #7A4AB4;
+    color: #ffde39;
+    font-size: 40px;
+}
+
+.btn-letra6:hover {
+    background: #ffde39;
+    color: #bd5957;
+    border-color:#ffde39;
+}
+
+.btn-letra6.active {
+    background: #ffde39;
+    color: #bd5957;
+    border-color:#ffde39;
+}
+
 .btn-frida {
     background: url('../img/fridaB.png') no-repeat;
     cursor:pointer;
