@@ -1349,7 +1349,7 @@ function letras_fase_6() {
         }
         
         //Fiero
-        if ( letrasF6.letra1 == resposta_fase_6[0] && letrasF6.letra3 == resposta_fase_6[1] && letrasF6.letra7 == resposta_fase_6[2] && letrasF6.letra2 == resposta_fase_6[3]  && letrasF6.letra5 == resposta_fase_6[3]) {
+        if ( letrasF6.letra1 == resposta_fase_6[0] && letrasF6.letra3 == resposta_fase_6[1] && letrasF6.letra7 == resposta_fase_6[2] && letrasF6.letra2 == resposta_fase_6[3]  && letrasF6.letra5 == resposta_fase_6[4]) {
             resposta_fase_6 = [];
             if ( quantidade_acertada_f6.indexOf('Fiero') === -1 ) {
                 quantidade_acertada_f6.push('Fiero');
@@ -1362,7 +1362,7 @@ function letras_fase_6() {
             }
         }
         //Lejos
-        if ( letrasF6.letra6 == resposta_fase_6[0] && letrasF6.letra7 == resposta_fase_6[1] && letrasF6.letra4 == resposta_fase_6[2] && letrasF6.letra5 == resposta_fase_6[3]  && letrasF6.letra8 == resposta_fase_6[3]) {
+        if ( letrasF6.letra6 == resposta_fase_6[0] && letrasF6.letra7 == resposta_fase_6[1] && letrasF6.letra4 == resposta_fase_6[2] && letrasF6.letra5 == resposta_fase_6[3]  && letrasF6.letra8 == resposta_fase_6[4]) {
             resposta_fase_6 = [];
             if ( quantidade_acertada_f6.indexOf('Lejos') === -1 ) {
                 quantidade_acertada_f6.push('Lejos');
@@ -1388,7 +1388,7 @@ function letras_fase_6() {
             }
         }
          //Serio
-         if ( letrasF6.letra8 == resposta_fase_6[0] && letrasF6.letra7 == resposta_fase_6[1] && letrasF6.letra2 == resposta_fase_6[2] && letrasF6.letra3 == resposta_fase_6[3]  && letrasF6.letra5 == resposta_fase_6[3]) {
+         if ( letrasF6.letra8 == resposta_fase_6[0] && letrasF6.letra7 == resposta_fase_6[1] && letrasF6.letra2 == resposta_fase_6[2] && letrasF6.letra3 == resposta_fase_6[3]  && letrasF6.letra5 == resposta_fase_6[4]) {
             resposta_fase_6 = [];
             if ( quantidade_acertada_f6.indexOf('Serio') === -1 ) {
                 quantidade_acertada_f6.push('Serio');
@@ -1401,7 +1401,7 @@ function letras_fase_6() {
             }
         }
           //Soler
-          if ( letrasF6.letra8 == resposta_fase_6[0] && letrasF6.letra5 == resposta_fase_6[1] && letrasF6.letra6 == resposta_fase_6[2] && letrasF6.letra7 == resposta_fase_6[3]  && letrasF6.letra2 == resposta_fase_6[3]) {
+          if ( letrasF6.letra8 == resposta_fase_6[0] && letrasF6.letra5 == resposta_fase_6[1] && letrasF6.letra6 == resposta_fase_6[2] && letrasF6.letra7 == resposta_fase_6[3]  && letrasF6.letra2 == resposta_fase_6[4]) {
             resposta_fase_6 = [];
             if ( quantidade_acertada_f6.indexOf('Soler') === -1 ) {
                 quantidade_acertada_f6.push('Soler');
