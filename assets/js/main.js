@@ -101,7 +101,7 @@ function setup() {
     btn_salvador.position(773, 388);
     btn_salvador.addClass("btn btn-salvador");
     btn_salvador.mousePressed(tela_salvador);
-    //btn_salvador.attribute('disabled', '');
+    btn_salvador.attribute('disabled', '');
     
     // BOTÕES FASES
     btn_fase1 = createButton('1');
@@ -474,12 +474,6 @@ function tela_fase_1() {
     btn_letraG1.show();
     btn_letraU1.show();
     btn_letraN1.show();
-    
-    /*btn_letraA1.mouseOver(letras_fase_1);
-    btn_letraL1.mouseOver(letras_fase_1);
-    btn_letraG1.mouseOver(letras_fase_1);
-    btn_letraU1.mouseOver(letras_fase_1);
-    btn_letraN1.mouseOver(letras_fase_1);*/
 
     background(cor_principal);
     noStroke();
@@ -500,7 +494,6 @@ function letras_fase_1() {
 
     resposta_fase_1.push(this.html());
     console.log(quantidade_acertada.length);
-    //this.addClass('active');
 
     if ( quantidade_acertada.length <= 2 ) {
         // Algun
@@ -512,10 +505,8 @@ function letras_fase_1() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -528,10 +519,8 @@ function letras_fase_1() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -544,10 +533,8 @@ function letras_fase_1() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -560,10 +547,8 @@ function letras_fase_1() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -576,10 +561,8 @@ function letras_fase_1() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -592,22 +575,18 @@ function letras_fase_1() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
         if ( resposta_fase_1.length >= 5 ) {
             resposta_fase_1 = [];
             alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
-            //btn_remove_active();
         }
     } else {  
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 2.');
         btn_fase2.removeAttribute('disabled', '');   
-        //btn_remove_active();
     }
 }
 
@@ -634,12 +613,6 @@ function tela_fase_2() {
     btn_letraN2.show();
     btn_letraO2.show();
 
-    /*btn_letraS2.mouseOver(letras_fase_2);
-    btn_letraU2.mouseOver(letras_fase_2);
-    btn_letraE2.mouseOver(letras_fase_2);
-    btn_letraN2.mouseOver(letras_fase_2);
-    btn_letraO2.mouseOver(letras_fase_2);*/
-
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -659,7 +632,6 @@ function letras_fase_2(){
 
     resposta_fase_2.push(this.html());
     console.log(quantidade_acertada_f2.length);
-    //this.addClass('active');
 
     if ( quantidade_acertada_f2.length <=2 ) {
         //Sueño
@@ -671,10 +643,8 @@ function letras_fase_2(){
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f2, 700, 150);
-                //btn_remove_active();
             } else{
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -687,10 +657,8 @@ function letras_fase_2(){
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f2, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -703,10 +671,8 @@ function letras_fase_2(){
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f2, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -719,10 +685,8 @@ function letras_fase_2(){
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f2, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -735,22 +699,18 @@ function letras_fase_2(){
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f2, 700, 150);
-                //btn_remove_active();
             }else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
         if ( resposta_fase_2.length >= 5 ) {
             resposta_fase_2 = [];
             alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
-            //btn_remove_active();
         }
     } else {
         btn_fase3.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 3.');
-        //btn_remove_active();
     }
 }
 
@@ -777,12 +737,6 @@ function tela_fase_3() {
     btn_letraS3.show();
     btn_letraA3.show();
 
-    /*btn_letraF3.mouseOver(letras_fase_3);
-    btn_letraR3.mouseOver(letras_fase_3);
-    btn_letraE3.mouseOver(letras_fase_3);
-    btn_letraS3.mouseOver(letras_fase_3);
-    btn_letraA3.mouseOver(letras_fase_3);*/
-
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -802,7 +756,6 @@ function letras_fase_3() {
     
     resposta_fase_3.push(this.html());
     console.log(quantidade_acertada_f3.length);
-    //this.addClass('active');
 
     if ( quantidade_acertada_f3.length <=2 ) {
         //Fresa
@@ -814,10 +767,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -830,10 +781,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -846,10 +795,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             }  else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -862,10 +809,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -878,10 +823,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             }  else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }  
         
@@ -894,10 +837,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -910,10 +851,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -926,10 +865,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -942,10 +879,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -958,10 +893,8 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -974,23 +907,19 @@ function letras_fase_3() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f3, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
         if ( resposta_fase_3.length >= 5 ) {
             resposta_fase_3 = [];
             alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
-            //btn_remove_active();
         }
     } else {
         btn_fase4.removeAttribute('disabled', '');
         btn_frida.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 4.');
-        //btn_remove_active();
     }
 } 
 
@@ -1017,12 +946,6 @@ function tela_fase_4() {
     btn_letraH4.show();
     btn_letraE4.show();
 
-    /*btn_letraN4.mouseOver(letras_fase_4);
-    btn_letraO4.mouseOver(letras_fase_4);
-    btn_letraC4.mouseOver(letras_fase_4);
-    btn_letraH4.mouseOver(letras_fase_4);
-    btn_letraE4.mouseOver(letras_fase_4);*/
-
     background(cor_principal);
     noStroke();
     fill(cor_secundaria);
@@ -1042,7 +965,6 @@ function letras_fase_4() {
     
     resposta_fase_4.push(this.html());
     console.log(quantidade_acertada_f4.length);
-    //this.addClass('active');
 
     if ( quantidade_acertada_f4.length <=2 ) {
         //Noche
@@ -1054,10 +976,8 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         //Echo
@@ -1069,10 +989,8 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1085,10 +1003,8 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -1101,10 +1017,8 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1117,10 +1031,8 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -1133,10 +1045,8 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
 
@@ -1149,22 +1059,18 @@ function letras_fase_4() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f4, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
         if ( resposta_fase_4.length >= 5 ) {
             resposta_fase_4 = [];
             alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
-            //btn_remove_active();
         }
     } else {
         btn_fase5.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 5.');
-        //btn_remove_active();
     }
 } 
 
@@ -1190,12 +1096,6 @@ function tela_fase_5() {
     btn_letraD5.show();
     btn_letraE5.show();
     btn_letraR5.show();
-
-    /*btn_letraP5.mouseOver(letras_fase_5);
-    btn_letraO5.mouseOver(letras_fase_5);
-    btn_letraD5.mouseOver(letras_fase_5);
-    btn_letraE5.mouseOver(letras_fase_5);
-    btn_letraR5.mouseOver(letras_fase_5);*/
    
     background(cor_principal);
     noStroke();
@@ -1216,7 +1116,6 @@ function letras_fase_5() {
 
     resposta_fase_5.push(this.html());
     console.log(quantidade_acertada_f5.length);
-    //this.addClass('active');
 
     if ( quantidade_acertada_f5.length <=2 ) {
         //Poder
@@ -1228,10 +1127,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             }else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1244,10 +1141,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1260,10 +1155,10 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
+    
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
+    
             }
         }*/
         
@@ -1276,10 +1171,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             }else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1292,10 +1185,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1308,10 +1199,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1324,10 +1213,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1340,10 +1227,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1356,10 +1241,8 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1372,22 +1255,18 @@ function letras_fase_5() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f5, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
         if ( resposta_fase_5.length >= 5 ) {
             resposta_fase_5 = [];
             alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
-            //btn_remove_active();
         }
     } else {
         btn_fase6.removeAttribute('disabled', '');
         alert('Você passou de fase, volte para a tela anterior e vá para a fase 6.');
-        //btn_remove_active();
     }
 } 
 
@@ -1419,12 +1298,6 @@ function tela_fase_6() {
     btn_letraL6.show();
     btn_letraE6.show();
     btn_letraS6.show();
-
-    /*btn_letraB6.mouseOver(letras_fase_6);
-    btn_letraU6.mouseOver(letras_fase_6);
-    btn_letraE6.mouseOver(letras_fase_6);
-    btn_letraN6.mouseOver(letras_fase_6);
-    btn_letraO6.mouseOver(letras_fase_6);*/
    
     background(cor_principal);
     noStroke();
@@ -1445,7 +1318,6 @@ function letras_fase_6() {
     
     resposta_fase_6.push(this.html());
     console.log(quantidade_acertada_f6.length);
-    //this.addClass('active');
 
     if ( quantidade_acertada_f6.length <=2 ) {
         //FRIJOLES
@@ -1457,10 +1329,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
            
@@ -1473,10 +1343,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         
@@ -1489,10 +1357,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         //Lejos
@@ -1504,10 +1370,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         //Reloj
@@ -1519,10 +1383,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
          //Serio
@@ -1534,10 +1396,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
           //Soler
@@ -1549,10 +1409,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
           //Feos
@@ -1564,10 +1422,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         //Fiel
@@ -1579,10 +1435,8 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
          //Oler
@@ -1594,22 +1448,18 @@ function letras_fase_6() {
                 rect(largura_central-250, 135, 500, 20);
                 fill(cor_amarelo);
                 text(quantidade_acertada_f6, 700, 150);
-                //btn_remove_active();
             } else {
                 alert("VOCÊ JÁ INSERIU ESSA PALAVRA, TENTE NOVAMENTE!");
-                //btn_remove_active();
             }
         }
         if(resposta_fase_6.length >= 8){
             resposta_fase_6 = [];
             alert("ESSA PALAVRA NÃO EXISTE, TENTE NOVAMENTE!");
-            //btn_remove_active();
         }
     
     } else {
         btn_salvador.removeAttribute('disabled', '');
         alert('Parabéns, você concluiu todas as fases!.');
-        //btn_remove_active();
     }
 }
 
@@ -1809,36 +1659,3 @@ function mostrar_btn_fases(){
     btn_letraE6.hide();
     btn_letraS6.hide();
 }
-
-/*function btn_remove_active() {
-    btn_letraA1.removeClass('active');
-    btn_letraL1.removeClass('active');
-    btn_letraG1.removeClass('active');
-    btn_letraU1.removeClass('active');
-    btn_letraN1.removeClass('active');
-    btn_letraS2.removeClass('active');
-    btn_letraU2.removeClass('active');
-    btn_letraE2.removeClass('active');
-    btn_letraN2.removeClass('active');
-    btn_letraO2.removeClass('active');
-    btn_letraF3.removeClass('active');
-    btn_letraR3.removeClass('active');
-    btn_letraE3.removeClass('active');
-    btn_letraS3.removeClass('active');
-    btn_letraA3.removeClass('active');
-    btn_letraN4.removeClass('active');
-    btn_letraO4.removeClass('active');
-    btn_letraC4.removeClass('active');
-    btn_letraH4.removeClass('active');
-    btn_letraE4.removeClass('active');
-    btn_letraP5.removeClass('active');
-    btn_letraO5.removeClass('active');
-    btn_letraD5.removeClass('active');
-    btn_letraE5.removeClass('active');
-    btn_letraR5.removeClass('active');
-    btn_letraB6.removeClass('active');
-    btn_letraU6.removeClass('active');
-    btn_letraE6.removeClass('active');
-    btn_letraN6.removeClass('active');
-    btn_letraO6.removeClass('active');
-}*/
